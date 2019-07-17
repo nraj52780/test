@@ -1,0 +1,43 @@
+<h1>Stories</h1> 
+  <div class="row">
+    {{#each stories}}
+    <div class="col s12 m4">
+      <div class="card cyan darken-4">
+
+        <div class="card-content white-text">
+          <span class="card-title">{{title}}</span>
+          
+          <p class="story-text"> {{ stripTags (truncate body)}}</p>
+        </div>
+        <div class="card-action">
+          <a href="/stories/show/{{id}}">Read More</a>
+          <a href="/stories/user/{{user.id}}">More from {{user.firstName}}</a>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <p>No stories</p>
+    {{/each}}
+  </div>
+ 
+ 
+ <!-- <div class="row">
+     {{#each stories}}
+    <div class="col s12 m6">
+      <div class="card">
+          <span class="card-title">Card Title</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <h5>{{title}}</h5>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+    </div>
+    {{else}}
+    <p>No stories</p>
+    {{/each}}
+  </div>-->
+ 
